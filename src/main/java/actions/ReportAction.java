@@ -120,7 +120,7 @@ public class ReportAction extends ActionBase{
             if (errors.size() > 0) {
                 //登録中にエラーがあった場合
 
-                putRequestScope(AttributeConst.TOKEN, getTokenId()); //CARF対策
+                putRequestScope(AttributeConst.TOKEN, getTokenId()); //CSRF対策
                 putRequestScope(AttributeConst.REPORT, rv);//縫う力サレタ日報情報
                 putRequestScope(AttributeConst.ERR, errors);//エラーのリスト
 
